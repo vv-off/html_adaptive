@@ -18,12 +18,12 @@ img {
     width: 100%;
 }
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Playfair Display';
+    font-family: "RobotoRegular";
     font-weight: normal;
     letter-spacing: 1px;
 }
 body {
-    font-family: 'Open Sans', arial, sans-serif;
+    font-family: "RobotoRegular";
     font-size: 14px;
     line-height: 1;
     color: #535353;
@@ -44,30 +44,29 @@ header:after, .container:after, footer:after, .widget-post-list li:after, #subsc
 }
 
 /* Htader */
-.wrap-header {
-    background: #e2e2e2;
-    background: linear-gradient(to top, #ffffff, #e2e2e2);
-}
-
-#header {
+.header {
     width: 100%;
     box-shadow: 3px 3px 1px rgba(0,0,0,.05);
     margin-bottom: 30px;
     position: relative;
 }
-.line-company {
-    overflow: hidden;
-    padding-top: 10px;
+.wrap-header {
+    background: #e2e2e2;
+    background: linear-gradient(to top, #ffffff, #e2e2e2);
 }
 .logo {
+    font-family: "RobotoBold";
     font-size: 48px;
     color: #2d769d;
     float: left;
-    margin: 18px 30px 0 0;
+    margin: 30px 30px 0 0;
     font-weight: 600;
 }
-.logo-icon {
+.logo-icon-search {
     float: left;
+    margin-left: 30px;
+}
+.logo-icon {
     margin-left: 30px;
 }
 .logo-icon li {
@@ -101,37 +100,19 @@ header:after, .container:after, footer:after, .widget-post-list li:after, #subsc
 .logo-icon p {
     display: inline-block;
 }
-.hot-line {
-    float: right;
-}
-.icon-hot-line {
-    float: left;
-    width: 60px;
-    margin: 6px 0 0 0;
-}
-.content-hot-line {
-    float: right;
-    margin: 10px 0 0 5px;
-}
-.title-hot-line {
-    color: #0077a0;
-    font-weight: 600;
-}
-.phone-hot-line {
-    margin-top: 7px;
-    font-size: 20px;
-    font-weight: 600;
-}
 
+.hotline-basket {
+    float: right;
+}
 /* Search form */
 #searchform {
     clear: both;
     text-align: center;
     position: relative;
-    margin: 0 0 10px 0;
+    margin: 15px 0 10px 35px;
 }
 #searchform input {
-    width: 50%;
+    width: 100%;
     font-style: italic;
     outline: none;
     color: #9e9e9c;
@@ -147,10 +128,51 @@ header:after, .container:after, footer:after, .widget-post-list li:after, #subsc
     width: 35px;
     border: none;
     background: transparent;
-    right: 25%;
+    right: 0;
+    bottom: 0;
 }
 #searchform input:focus {
     outline: 2px solid #ebebe3;
+}
+
+/*Hot line*/
+.hot-line {
+    overflow: hidden;
+}
+
+.icon-hot-line {
+    float: left;
+    width: 60px;
+    margin: 6px 10px 0 0;
+}
+.content-hot-line {
+    float: right;
+    margin: 10px 0 0 5px;
+}
+.title-hot-line {
+    color: #0077a0;
+    font-weight: 600;
+}
+.phone-hot-line {
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Basket */
+.basket {
+    overflow: hidden;
+    margin: 10px 0 10px 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+.basket img {
+    float: left;
+    width: 30px;
+}
+.content-basket {
+    float: left;
+    margin: 5px 0 0 29px;
 }
 
 /* Top menu */
@@ -172,25 +194,42 @@ header:after, .container:after, footer:after, .widget-post-list li:after, #subsc
     font-size: 20px;
 }
 #top-menu a:hover {
-
+    color: #ffe267;
+    border-bottom: 2px solid;
 }
-
-/* Basket */
-.basket {
-    position: absolute;
-    right: 10%;
-    bottom: 0px;
-    background: url(../image/basket-area.png) no-repeat;
-    /* height: 80px; */
-    width: 271px;
-    height: 79px;
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+    display: none;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    background: #ef5a42;
+    cursor: pointer;
 }
-.basket img {
+.nav-toggle span {
     display: block;
-    width: 50px;
-    margin-left: 25px;
+    position: absolute;
+    top: 19px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: white;
 }
-
-
-
+.nav-toggle span:before, .nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+.nav-toggle span:before {
+    top: -10px;
+}
+.nav-toggle span:after{
+    bottom: -10px;
+}
 
